@@ -2,7 +2,7 @@
 FROM python:3.11-slim
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     curl \
     git \
@@ -17,8 +17,10 @@ WORKDIR /app
 # Copy requirements
 COPY pyproject.toml uv.lock README.md ./
 
-# Install dependencies
-RUN uv sync
+# Install dependencies (no dev dependencies)
+RUN uv sync --no-dev --no-cache && \
+    find /app/.venv -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true && \
+    find /app/.venv -type f -name "*.pyc" -delete
 
 # Copy application code
 COPY . .
@@ -26,8 +28,13 @@ COPY . .
 # Create uploads directory
 RUN mkdir -p uploads
 
+# Set environment variables
+ENV PATH="/app/.venv/bin:$PATH" \
+    PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+
 # Expose port
 EXPOSE 8000
 
 # Run the application
-CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

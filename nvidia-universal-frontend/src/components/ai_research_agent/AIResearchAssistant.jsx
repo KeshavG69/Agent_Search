@@ -24,7 +24,7 @@ const AIResearchAssistant = () => {
   const [loadingSteps, setLoadingSteps] = useState([]);
 
   // Add your backend URL here - adjust port if needed
-  const BACKEND_URL = 'http://localhost:8000';
+  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
 
   // Supported file formats - only PDF, DOC, DOCX, TXT
   const supportedFormats = ['pdf', 'doc', 'docx', 'txt'];
