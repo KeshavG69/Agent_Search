@@ -18,7 +18,7 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 ENV PATH="/root/.cargo/bin:${PATH}"
 
 # Install dependencies
-RUN uv sync --frozen
+RUN /root/.cargo/bin/uv sync
 
 # Copy application code
 COPY . .
