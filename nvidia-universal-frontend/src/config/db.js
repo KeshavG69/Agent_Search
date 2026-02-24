@@ -1,0 +1,1 @@
+// This is the sample database configuration file.

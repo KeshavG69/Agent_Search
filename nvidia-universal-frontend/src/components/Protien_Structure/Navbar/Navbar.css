@@ -1,0 +1,54 @@
+.nvidia-navbar {
+    background-color: #000000;
+    border-bottom: 1px solid #333;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nvidia-navbar-content {
+    width: 100%;
+    max-width: 1400px;
+    /* match container width approx */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nvidia-navbar .company-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nvidia-navbar .logo-image {
+    height: 40px;
+    width: auto;
+}
+
+.nvidia-navbar .nvidia-branding {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "D-DIN", DIN, "DIN-2014", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* Try to match Nvidia font stack */
+}
+
+.nvidia-navbar .powered-by {
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nvidia-navbar .nvidia-text {
+    color: #76b900;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}

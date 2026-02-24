@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+.env
+
+# Poetry
+.poetry/
+poetry.lock
+
+
+# IDE-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.spyderproject
+.spyproject
+.ropeproject
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Local development
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+gmail_token.json
+
+# Gmail Agent Token
+Prototypes/Gmail_Agent/backend/tokens/gmail_token.json
+credentials.json
+
+
+# frontend react 
+node_modules/
+
+
+# normal file
+sample.txt
+DocDeadline.txt
+.gitconfig
+

@@ -1,0 +1,46 @@
+.floating-buttons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  /* flex-direction: column; */
+  gap: 12px;
+  z-index: 9999;
+}
+
+.float-btn {
+  background-color: #000; /* black background */
+  color: #76b900; /* NVIDIA green text */
+  border: 2px solid #76b900;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.float-btn:hover {
+  background-color: #76b900; /* green background on hover */
+  color: #000; /* black text */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(118, 185, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+  .floating-buttons {
+    top: 15px;
+    right: 15px;
+    gap: 8px;
+  }
+
+  .float-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}

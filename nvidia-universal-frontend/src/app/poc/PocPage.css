@@ -1,0 +1,328 @@
+/* POCpage.css */
+
+.poc-page-container {
+  min-height: 100vh;
+  background: #000000;
+}
+
+/* Header Styles */
+.poc-header {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(118, 185, 0, 0.2);
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.poc-header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.company-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #76b900;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+.logo-image {
+  height: 3.5rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.nvidia-image{
+  height: 2rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.nvidia-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nvidia-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nvidia-brand {
+  color: #76b900;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #76b900 0%, #8cd200 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Content Styles */
+.poc-content {
+  padding: 2rem 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.page-title {
+  color: #ffffff !important;
+  font-size: 3rem !important;
+  font-weight: 900 !important;
+  margin-bottom: 0.5rem !important;
+  background: linear-gradient(135deg, #ffffff 0%, #76b900 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 1.1rem !important;
+}
+
+/* POC Cards */
+.poc-cards-row {
+  margin-bottom: 3rem;
+}
+
+.poc-card {
+  background: #1a1a1a !important;
+  border: 1px solid rgba(118, 185, 0, 0.3) !important;
+  border-radius: 12px !important;
+  height: 100%;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.poc-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #76b900, #8cd200);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.poc-card:hover::before {
+  transform: scaleX(1);
+}
+
+.poc-card:hover {
+  transform: translateY(-8px);
+  border-color: #76b900 !important;
+  box-shadow: 0 12px 40px rgba(118, 185, 0, 0.3);
+  background: rgba(118, 185, 0, 0.08) !important;
+}
+
+.poc-card .ant-card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.poc-title {
+  color: #ffffff !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.poc-description {
+  color: rgba(255, 255, 255, 0.7) !important;
+  line-height: 1.6;
+  margin-bottom: 1rem !important;
+  flex-grow: 1;
+}
+
+.poc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(118, 185, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgb(255, 255, 255)!important;
+  font-size: 0.9rem;
+}
+
+.meta-item .anticon {
+  color: #76b900;
+}
+
+.category-tag {
+  background: rgba(118, 185, 0, 0.2) !important;
+  border: 1px solid #76b900 !important;
+  color: #76b900 !important;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.status-badge .ant-badge-status-dot {
+  width: 10px;
+  height: 10px;
+}
+
+.model-chip {
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(118, 185, 0, 0.4);
+  color: #76b900;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.models-container {
+  margin-top: 1rem;
+}
+
+/* View POC Button */
+.view-poc-button {
+  background: #76b900 !important;
+  border: none !important;
+  color: #1a1a1a !important;
+  font-weight: bold !important;
+  height: 45px !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  margin-top: auto;
+  font-size: 1rem !important;
+}
+
+.view-poc-button:hover {
+  background: #8cd200 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(118, 185, 0, 0.4) !important;
+}
+
+.view-poc-button .anticon {
+  transition: transform 0.3s ease;
+}
+
+.view-poc-button:hover .anticon {
+  transform: translateX(5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .poc-header-content {
+    padding: 0.75rem 0;
+  }
+
+  .company-logo {
+    font-size: 1.2rem;
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+
+  .nvidia-brand {
+    font-size: 1.4rem;
+  }
+
+  .nvidia-text {
+    display: none;
+  }
+
+  .poc-content {
+    padding: 1rem 4%;
+  }
+
+  .page-title {
+    font-size: 2rem !important;
+  }
+
+  .page-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .poc-title {
+    font-size: 1.25rem !important;
+  }
+
+  .page-header {
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-logo {
+    font-size: 1rem;
+  }
+
+  .logo-icon {
+    font-size: 1.3rem;
+  }
+
+  .nvidia-brand {
+    font-size: 1.2rem;
+  }
+
+  .page-title {
+    font-size: 1.75rem !important;
+  }
+
+  .poc-card {
+    margin-bottom: 1rem;
+  }
+
+  .view-poc-button {
+    height: 40px !important;
+    font-size: 0.9rem !important;
+  }
+}

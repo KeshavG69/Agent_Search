@@ -1,0 +1,234 @@
+/* Global Page Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #000000;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 100%;
+  padding: 1.5rem;
+  background-color: #000000;
+}
+
+/* Header/Navbar Overrides if needed, though PocHeader handles most */
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  /* Center the toggle buttons */
+  background-color: #000000;
+  padding: 10px;
+}
+
+/* Toggle Buttons */
+.button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  /* Slight rounded corners, but sharper for tech feel */
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #333;
+  background-color: #1a1a1a;
+  color: #888;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.button:hover {
+  background-color: #252525;
+  color: #fff;
+  border-color: #76b900;
+}
+
+.button.active {
+  background-color: #76b900;
+  color: #000000;
+  border-color: #76b900;
+  box-shadow: 0 0 15px rgba(118, 185, 0, 0.4);
+}
+
+/* Component Wrapper (if used) */
+.component {
+  padding: 2rem;
+  background-color: #0a0a0a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.component h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #76b900;
+}
+
+.component p {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+/* Scrollbar Styling for Webkit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #76b900;
+}
+
+/* Shared Nvidia Theme Form Styles */
+.nvidia-input,
+.form-control,
+.form-select {
+  background-color: #111 !important;
+  border: 1px solid #333 !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder styling override */
+.nvidia-input::placeholder,
+.form-control::placeholder,
+.form-select::placeholder {
+  color: #888 !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+
+.nvidia-input:focus,
+.form-control:focus,
+.form-select:focus {
+  border-color: #76b900 !important;
+  box-shadow: 0 0 8px rgba(118, 185, 0, 0.3) !important;
+  outline: none;
+}
+
+.form-label,
+label {
+  color: #76b900;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.text-muted {
+  color: #888 !important;
+}
+
+/* Range Sliders */
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #76b900;
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Checkboxes */
+.form-check-input {
+  background-color: #333;
+  border-color: #555;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #76b900;
+  border-color: #76b900;
+}
+
+/* Specific Nvidia Sections colors */
+.nvidia-panel {
+  background-color: #000000;
+  border: 1px solid #333;
+  /* subtle border instead of bright green */
+  padding: 1rem;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: #ffffff !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Spinner */
+.spinner-border {
+  color: #76b900 !important;
+}
+
+/* Nav Pills/Tabs overrides */
+.nav-pills .nav-link {
+  background-color: #1a1a1a;
+  color: #aaa;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #76b900 !important;
+  color: #000 !important;
+  border-color: #76b900 !important;
+}
+
+/* 3D Viewer Container */
+.viewer-container {
+  background-color: #000;
+  border: 1px solid #333;
+  position: relative;
+}
