@@ -1,4 +1,4 @@
-# Use Python 3.11 slim image
+m# Use Python 3.11 slim image
 FROM python:3.11-slim
 
 # Set working directory
@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements
-COPY ../../../pyproject.toml ../../../uv.lock ./
+COPY pyproject.toml uv.lock ./
 
 # Install uv
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
