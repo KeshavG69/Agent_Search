@@ -9,7 +9,7 @@ from dotenv import load_dotenv
  
 from llama_parse import LlamaParse
 from langchain_core.documents import Document as LangchainDocument
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
  
 import time
  
