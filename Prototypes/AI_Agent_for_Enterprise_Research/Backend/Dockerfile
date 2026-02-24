@@ -15,10 +15,9 @@ COPY pyproject.toml uv.lock ./
 
 # Install uv and dependencies
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh && \
-    export PATH="/root/.cargo/bin:${PATH}" && \
-    uv sync
+    /root/.local/bin/uv sync
 
-ENV PATH="/root/.cargo/bin:${PATH}"
+ENV PATH="/root/.local/bin:${PATH}"
 
 # Copy application code
 COPY . .
