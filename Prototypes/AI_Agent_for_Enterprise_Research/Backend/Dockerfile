@@ -1,26 +1,21 @@
 # Use Python 3.11 slim image
 FROM python:3.11-slim
 
-# Install system dependencies
+# Install minimal system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
     curl \
-    git \
     && rm -rf /var/lib/apt/lists/*
-
-# Install uv
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
 
 # Set working directory
 WORKDIR /app
 
 # Copy requirements
-COPY pyproject.toml uv.lock README.md ./
+COPY requirements.txt ./
 
-# Install dependencies (no dev dependencies)
-RUN uv sync --no-dev --no-cache && \
-    find /app/.venv -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true && \
-    find /app/.venv -type f -name "*.pyc" -delete
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt && \
+    find /usr/local/lib/python3.11 -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true && \
+    find /usr/local/lib/python3.11 -type f -name "*.pyc" -delete
 
 # Copy application code
 COPY . .
@@ -29,8 +24,7 @@ COPY . .
 RUN mkdir -p uploads
 
 # Set environment variables
-ENV PATH="/app/.venv/bin:$PATH" \
-    PYTHONUNBUFFERED=1 \
+ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1
 
 # Expose port
